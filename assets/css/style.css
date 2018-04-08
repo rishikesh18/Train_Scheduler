@@ -1,0 +1,14 @@
+body {
+    background-color: cyan;
+}
+
+.jumbotron {
+    color: cornflowerblue;
+    background-color: blanchedalmond;
+    padding: 10px;
+}
+
+.panel, panel-default {
+    color: rgb(143, 188, 182);
+    background-color: olive;
+}
