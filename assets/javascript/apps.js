@@ -5,7 +5,7 @@ var config = {
     authDomain: "train-schedular-7a2a4.firebaseapp.com",
     databaseURL: "https://train-schedular-7a2a4.firebaseio.com",
     projectId: "train-schedular-7a2a4",
-    storageBucket: "",
+    storageBucket: "train-schedular-7a2a4.appspot.com",
     messagingSenderId: "752554378005"
 };
   
@@ -53,9 +53,8 @@ function getListTIme(childSnapshot){
    
     if(mod===0) {
       var nextArrival=newTime.add(mod,'minutes');
-      yourTrain="Train ready";
       nextArrival= nextArrival.format('HH:mm');
-      $("#traintable").append("<tr><td>"+childSnapshot.val().trainName+"</td><td>"+childSnapshot.val().destination+"</td><td>"+childSnapshot.val().frequency+"</td><td>"+yourTrain+"</td><td>"+mod+"</td></tr>");
+      $("#traintable").append("<tr><td>"+childSnapshot.val().trainName+"</td><td>"+childSnapshot.val().destination+"</td><td>"+childSnapshot.val().frequency+"</td><td>"+nextArrival+"</td><td>"+mod+"</td></tr>");
     } else {
       mod=childSnapshot.val().frequency-mod;
       var nextArrival=newTime.add(mod,'minutes');
