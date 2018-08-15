@@ -17,12 +17,12 @@ var config = {
 $('#submit').click(function(){
     if($('#train_name').val().trim() && $('#destination').val().trim() &&  $('#time').val().trim() && $('#frequency').val().trim())
     { 
-    database.ref().push({
+        database.ref().push({
         trainName:$('#train_name').val().trim(),
         destination: $('#destination').val().trim(),
         startTime: $('#time').val().trim(),
         frequency: $('#frequency').val().trim()
-      });
+        });
     }
 });
 
